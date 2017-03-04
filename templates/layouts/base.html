@@ -1,0 +1,30 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>{% if page_title %}{{ page_title }} | {% endif %}{{ site_name }}</title>
+        {% assets 'css_all' %}
+            <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" media="all">
+        {% endassets %}
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="{{ url_for('index_route') }}">Home</a>
+                <a href="{{ url_for('about_route') }}">About</a>
+            </div>
+        </header>
+
+        <main class="container">
+            {% block content %}
+            {% endblock content %}
+        </main>
+
+        <footer class="container">
+            &copy; {{ now.year }} {{ site_name }}
+        </footer>
+
+        {% assets 'js_all' %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+    </body>
+</html>

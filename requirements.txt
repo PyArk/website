@@ -1,0 +1,8 @@
+Flask==0.12
+Flask-Assets==0.12
+Jinja2==2.9.5
+MarkupSafe==0.23
+Werkzeug==0.11.15
+click==6.7
+itsdangerous==0.24
+webassets==0.12.1

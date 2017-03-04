@@ -1,0 +1,19 @@
+$grid-width: 960px;
+
+$padding-small: 6px;
+$padding-medium: $padding-small * 2;
+$padding-large: $padding-small * 3;
+
+$black: #333;
+
+$gray-1: #666;
+$gray-2: #999;
+$gray-3: #bbb;
+$gray-4: #eee;
+$gray-5: #fefefe;
+
+$accent-medium: #149D25;
+$accent-light: lighten($accent-medium, 10%);
+$accent-dark: darken($accent-medium, 5%);
+
+$base-font-size: 16px;

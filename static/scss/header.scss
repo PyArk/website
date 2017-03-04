@@ -1,0 +1,11 @@
+@import 'globals';
+
+header {
+    padding: $padding-large 0;
+    border-bottom: 2px solid $accent-light;
+    text-align: right;
+    a {
+        margin-left: $padding-large;
+        border: 0;
+    }
+}
