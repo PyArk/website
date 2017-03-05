@@ -5,23 +5,21 @@
         {% assets 'css_all' %}
             <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}" media="all">
         {% endassets %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <a href="{{ url_for('index_route') }}">Home</a>
-                <a href="{{ url_for('about_route') }}">About</a>
-            </div>
-        </header>
 
-        <main class="container">
-            {% block content %}
-            {% endblock content %}
+        {% include 'includes/header.html' %}
+        {% include 'includes/hero.html' %}
+
+        <main class="row">
+            <div class="container">
+                {% block content %}
+                {% endblock content %}
+            </div>
         </main>
 
-        <footer class="container">
-            &copy; {{ now.year }} {{ site_name }}
-        </footer>
+        {% include 'includes/footer.html' %}
 
         {% assets 'js_all' %}
             <script type="text/javascript" src="{{ ASSET_URL }}"></script>

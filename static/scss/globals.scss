@@ -5,6 +5,7 @@ $padding-medium: $padding-small * 2;
 $padding-large: $padding-small * 3;
 
 $black: #333;
+$white: #fff;
 
 $gray-1: #666;
 $gray-2: #999;
@@ -14,6 +15,6 @@ $gray-5: #fefefe;
 
 $accent-medium: #149D25;
 $accent-light: lighten($accent-medium, 10%);
-$accent-dark: darken($accent-medium, 5%);
+$accent-dark: darken($accent-medium, 10%);
 
 $base-font-size: 16px;

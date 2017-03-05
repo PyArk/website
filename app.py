@@ -21,20 +21,25 @@ assets.register('css_all', css)
 def global_context():
     return {
         'site_name': settings.SITE_NAME,
-        'now': datetime.utcnow()
+        'admin_email': settings.ADMIN_EMAIL,
+        'now': datetime.utcnow(),
     }
 
 @app.route('/', methods=['GET'])
 def index_route():
     return render_template('pages/index.html', page_title='Home')
 
-@app.route('/about/', methods=['GET'])
-def about_route():
-    return render_template('pages/about.html', page_title='About')
+@app.route('/get-involved/', methods=['GET'])
+def getinvolved_route():
+    return render_template('pages/getinvolved.html', page_title='Get Involved')
 
-@app.route('/about/meetups/', methods=['GET'])
-def about_meetups_route():
-    return render_template('pages/about_meetups.html')
+@app.route('/get-involved/meetups/', methods=['GET'])
+def getinvolved_meetups_route():
+    return render_template('pages/getinvolved_meetups.html')
+
+@app.route('/contact/', methods=['GET'])
+def contact_route():
+    return render_template('pages/contact.html', page_title='Contact Us')
 
 @app.errorhandler(404)
 def error_handler_404(error):

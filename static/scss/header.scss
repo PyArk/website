@@ -1,11 +1,50 @@
 @import 'globals';
 
 header {
-    padding: $padding-large 0;
+    position: relative;
     border-bottom: 2px solid $accent-light;
     text-align: right;
+    z-index: 1;
     a {
-        margin-left: $padding-large;
+        display: block;
+        float: right;
+        padding: $padding-large;
         border: 0;
+        transition: background-color 150ms linear, color 150ms linear;
+        &:hover {
+            background: $accent-light;
+            color: $white;
+        }
+        &::last-child {
+            margin-right: -$padding-large;
+        }
+    }
+    .logo {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: -10px;
+        left: 0;
+        width: 80px;
+        padding: 0;
+        background: $accent-light;
+        &:hover {
+            background: $accent-medium;
+        }
+        &::after {
+            $img-width: 48px;
+            $img-height: 42px;
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            width: $img-width;
+            height: $img-height;
+            margin: ($img-height / -2) 0 0 ($img-width / -2);
+            background: url(../img/pyar2-logo.png) 0 0 no-repeat;
+            background-size: $img-width $img-height;
+
+        }
     }
 }

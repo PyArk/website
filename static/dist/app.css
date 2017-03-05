@@ -5,40 +5,153 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   color: #333;
+  background: #fff;
 }
-@media -sass-debug-info{filename{}line{font-family:\000039}}
+@media -sass-debug-info{filename{}line{font-family:\0000310}}
 body,
 body * {
   box-sizing: border-box;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000315}}
+@media -sass-debug-info{filename{}line{font-family:\0000316}}
 a {
   color: #149D25;
   text-decoration: none;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #149D25;
+  transition: border-color 100ms linear;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000319}}
+@media -sass-debug-info{filename{}line{font-family:\0000321}}
 a:hover {
-  color: #084310;
-  border-bottom: none;
+  color: #0e701a;
+  border-color: transparent;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000327}}
+header,
+section,
+main,
+footer,
+cite {
+  display: block;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\000033}}
+footer {
+  margin-top: 54px;
+  padding: 18px 0;
+  border-top: 1px solid #eee;
+  color: #999;
+  font-size: 0.8em;
 }
 
 
 @media -sass-debug-info{filename{}line{font-family:\000033}}
 header {
-  padding: 18px 0;
+  position: relative;
   border-bottom: 2px solid #1aca30;
   text-align: right;
+  z-index: 1;
 }
-@media -sass-debug-info{filename{}line{font-family:\000037}}
+@media -sass-debug-info{filename{}line{font-family:\000038}}
 header a {
-  margin-left: 18px;
+  display: block;
+  float: right;
+  padding: 18px;
   border: 0;
+  transition: background-color 150ms linear, color 150ms linear;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000314}}
+header a:hover {
+  background: #1aca30;
+  color: #fff;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000318}}
+header a::last-child {
+  margin-right: -18px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000322}}
+header .logo {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  padding: 0;
+  background: #1aca30;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000331}}
+header .logo:hover {
+  background: #149D25;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000334}}
+header .logo::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 42px;
+  margin: -21px 0 0 -24px;
+  background: url(../img/pyar2-logo.png) 0 0 no-repeat;
+  background-size: 48px 42px;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\000033}}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 54px;
+  background: url(../img/little-rock-skyline.jpg) 50% 29%;
+  background-size: cover;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000310}}
+.hero:hover cite {
+  opacity: 1;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000313}}
+.hero cite {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  opacity: 0.5;
+  transition: opacity 200ms linear;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000320}}
+.hero a {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 0.8em;
+  font-style: normal;
+  color: #333;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000327}}
+.hero a:hover {
+  color: #333;
 }
 
 @media -sass-debug-info{filename{}line{font-family:\000033}}
 .container {
+  position: relative;
   width: 960px;
+  max-width: 100%;
+  padding: 0 18px;
   margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000311}}
+.row {
+  float: left;
+  clear: left;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000317}}
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
 }

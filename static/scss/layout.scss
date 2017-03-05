@@ -1,6 +1,21 @@
 @import 'globals';
 
 .container {
+    position: relative;
     width: $grid-width;
+    max-width: 100%;
+    padding: 0 $padding-large;
     margin: 0 auto;
+}
+
+.row {
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
 }

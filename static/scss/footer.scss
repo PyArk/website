@@ -1,0 +1,9 @@
+@import 'globals';
+
+footer {
+    margin-top: $padding-large * 3;
+    padding: $padding-large 0;
+    border-top: 1px solid $gray-4;
+    color: $gray-2;
+    font-size: 0.8em;
+}
