@@ -1,0 +1,14 @@
+{% if events %}
+    <p>
+        {{ events|length }} upcoming event{% if events|length != 1 %}s{% endif %}
+    </p>
+    <ul>
+        {% for event in events %}
+            <li>
+                {{ event.date.strftime('%Y-%m-%d %-I:%M') }}
+                {{ event.description|safe }}
+                <a href="{{ event.link }}">Learn more</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}

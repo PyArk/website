@@ -2,5 +2,7 @@
 
 {% block content %}
     <h1>{{ page_title }}</h1>
-    <p>testing</p>
+    <div id="meetups-list" data-meetups-url="{{ url_for('getinvolved_meetups_route') }}">
+        <p>loading meetups...</p>
+    </div>
 {% endblock content %}

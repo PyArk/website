@@ -1,4 +1,5 @@
-from datetime import datetime
+import requests
+from datetime import datetime, timezone
 
 from flask import Flask, render_template
 from flask_assets import Environment, Bundle
@@ -8,7 +9,7 @@ import settings
 
 app = Flask(__name__)
 assets = Environment(app)
-app.config['ASSETS_DEBUG'] = True
+app.config['ASSETS_DEBUG'] = settings.ASSETS_DEBUG
 
 
 js = Bundle('js/app.js', filters='babel', output='dist/app.js')
@@ -35,7 +36,15 @@ def getinvolved_route():
 
 @app.route('/get-involved/meetups/', methods=['GET'])
 def getinvolved_meetups_route():
-    return render_template('pages/getinvolved_meetups.html')
+    r = requests.get('http://api.meetup.com/Python-Artists-of-Arkansas/events')
+    events = None
+    if r.status_code == 200:
+        events = r.json()
+        for event in events:
+            dt = datetime.utcfromtimestamp(event['time'] / 1000)
+            event['date'] = dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+
+    return render_template('pages/getinvolved_meetups.html', events=events)
 
 @app.route('/contact/', methods=['GET'])
 def contact_route():
