@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>{% if page_title %}{{ page_title }} | {% endif %}{{ site_name }}</title>
@@ -7,7 +7,7 @@
         {% endassets %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+    <body class="{% block page_scope %}{% endblock page_scope %}">
 
         {% include 'includes/header.html' %}
         {% include 'includes/hero.html' %}

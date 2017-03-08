@@ -36,15 +36,24 @@ def getinvolved_route():
 
 @app.route('/get-involved/meetups/', methods=['GET'])
 def getinvolved_meetups_route():
-    r = requests.get('http://api.meetup.com/Python-Artists-of-Arkansas/events')
+    r = None
+    try:
+        r = requests.get('http://api.meetup.com/{}/events'.format(settings.MEETUP_SLUG))
+    except requests.exceptions.ConnectionError:
+        pass
     events = None
-    if r.status_code == 200:
+    success = False
+    if r and r.status_code == 200:
+        success = True
         events = r.json()
         for event in events:
             dt = datetime.utcfromtimestamp(event['time'] / 1000)
             event['date'] = dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
-
-    return render_template('pages/getinvolved_meetups.html', events=events)
+    meetup_url = 'https://www.meetup.com/{}/events/'.format(settings.MEETUP_SLUG)
+    return render_template('pages/getinvolved_meetups.html',
+                           events=events,
+                           success=success,
+                           meetup_url=meetup_url)
 
 @app.route('/contact/', methods=['GET'])
 def contact_route():

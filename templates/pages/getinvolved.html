@@ -1,8 +1,46 @@
 {% extends 'layouts/base.html' %}
 
+{% block page_scope %} get-involved-page{% endblock page_scope %}
+
 {% block content %}
-    <h1>{{ page_title }}</h1>
-    <div id="meetups-list" data-meetups-url="{{ url_for('getinvolved_meetups_route') }}">
-        <p>loading meetups...</p>
-    </div>
+    <section class="row">
+        <h1>{{ page_title }}</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+            Nulla tempus ante id fermentum posuere. Praesent volutpat eget nisi in laoreet. Donec id
+            eros velit.
+        </p>
+    </section>
+
+    <section class="row">
+        <h2>Meetups</h2>
+        <div id="meetups-list" data-meetups-url="{{ url_for('getinvolved_meetups_route') }}">
+            <p>loading meetups...</p>
+        </div>
+    </section>
+
+    <section class="row">
+        <h2>Projects</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+        </p>
+        <ul>
+            <li>
+                <h3>SATNOGS</h3>
+                <p><em>Details coming soon...</em></p>
+            </li>
+            <li>
+                <h3>Kids Programming Thing</h3>
+                <p><em>Details coming soon...</em></p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="row">
+        <h2>PYCONAR</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+        </p>
+        <p><em>Details coming soon...</em></p>
+    </section>
 {% endblock content %}

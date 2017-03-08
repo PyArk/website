@@ -6,14 +6,35 @@ header {
     text-align: right;
     z-index: 1;
     a {
+        $border-size: 2px;
+        position: relative;
         display: block;
         float: right;
         padding: $padding-large;
         border: 0;
+        line-height: 1.3em;
+        overflow: hidden;
         transition: background-color 150ms linear, color 150ms linear;
-        &:hover {
+        &:hover::after {
+            transform: translate(0, 0);
+        }
+        &.active {
+            font-weight: bold;
+            &::after {
+                transform: translate(0, 0);
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: $border-size;
             background: $accent-light;
-            color: $white;
+            transform: translate(0, $border-size);
+            transition: transform 150ms linear;
         }
         &::last-child {
             margin-right: -$padding-large;
