@@ -65,4 +65,4 @@ def error_handler_404(error):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=settings.FLASK_DEBUG)
