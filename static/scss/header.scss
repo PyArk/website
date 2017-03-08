@@ -63,9 +63,34 @@ header {
             width: $img-width;
             height: $img-height;
             margin: ($img-height / -2) 0 0 ($img-width / -2);
-            background: url(../img/pyar2-logo.png) 0 0 no-repeat;
+            background: url(/static/img/pyar2-logo.png) 0 0 no-repeat;
             background-size: $img-width $img-height;
 
+        }
+    }
+
+    @media (max-width:420px) {
+        .container {
+            padding: 0;
+        }
+        a {
+            margin: 0;
+            padding: $padding-medium;
+            font-size: 0.9em;
+            text-align: center;
+            &.home {
+                display: none;
+            }
+        }
+        .logo::after {
+            transform: scale(0.8);
+        }
+    }
+
+    @media (max-width:280px) {
+        a {
+            padding: $padding-medium $padding-small;
+            font-size: 0.8em;
         }
     }
 }

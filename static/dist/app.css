@@ -82,6 +82,25 @@ footer {
   color: #999;
   font-size: 0.8em;
 }
+@media -sass-debug-info{filename{}line{font-family:\000039}}
+footer .left {
+  float: left;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000312}}
+footer .right {
+  float: right;
+  text-align: right;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000316}}
+footer ul {
+  margin: 0;
+  list-style: none;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000320}}
+footer li {
+  display: inline;
+  margin-left: 12px;
+}
 
 
 
@@ -157,8 +176,36 @@ header .logo::after {
   width: 48px;
   height: 42px;
   margin: -21px 0 0 -24px;
-  background: url(../img/pyar2-logo.png) 0 0 no-repeat;
+  background: url(/static/img/pyar2-logo.png) 0 0 no-repeat;
   background-size: 48px 42px;
+}
+@media (max-width: 420px) {
+@media -sass-debug-info{filename{}line{font-family:\0000373}}
+  header .container {
+    padding: 0;
+  }
+@media -sass-debug-info{filename{}line{font-family:\0000376}}
+  header a {
+    margin: 0;
+    padding: 12px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+@media -sass-debug-info{filename{}line{font-family:\0000381}}
+  header a.home {
+    display: none;
+  }
+@media -sass-debug-info{filename{}line{font-family:\0000385}}
+  header .logo::after {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 280px) {
+@media -sass-debug-info{filename{}line{font-family:\0000391}}
+  header a {
+    padding: 12px 6px;
+    font-size: 0.8em;
+  }
 }
 
 @media -sass-debug-info{filename{}line{font-family:\000033}}
@@ -167,7 +214,7 @@ header .logo::after {
   width: 100%;
   height: 200px;
   margin-bottom: 54px;
-  background: url(../img/little-rock-skyline.jpg) 50% 29%;
+  background: url(/static/img/little-rock-skyline.jpg) 50% 29%;
   background-size: cover;
 }
 @media -sass-debug-info{filename{}line{font-family:\0000310}}
