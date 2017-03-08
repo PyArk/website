@@ -1,4 +1,12 @@
-__pycache__
-.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+
+pip-log.txt
+pip-delete-this-directory.txt
+
+instance/
 .webassets-cache
+
+.DS_Store
 local_settings.py
