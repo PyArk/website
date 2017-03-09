@@ -28,15 +28,17 @@ header,
 section,
 main,
 footer,
+aside,
 cite {
     display: block;
+    margin: 0;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    margin: 0;
+    margin: 0 0 0.2em 0;
     line-height: 1.3em;
 }
 
@@ -53,13 +55,23 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.0em;
 }
 
 p {
+    margin: 0 0 1.2em 0;
     line-height: 1.4em;
 }
 
-section + section {
-    margin-top: $padding-large;
+.btn {
+    padding: $padding-small $padding-large;
+    border: 1px solid $gray-3;
+    background: $gray-5;
+    color: $gray-1;
+    border-radius: 2px;
+    &:hover {
+        border-color: $gray-3;
+        background: $gray-4;
+        color: $black
+    } 
 }

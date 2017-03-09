@@ -15,11 +15,7 @@ function getMeetups(url) {
 window.addEventListener('DOMContentLoaded', function () {
     const meetupsContainer = document.getElementById('meetups-list');
     if (meetupsContainer) {
-        const url = meetupsContainer.dataset.meetupsUrl;
-        console.log(url);
-        getMeetups(url).then((result) => {
-            console.log(result);
-            meetupsContainer.innerHTML = result;
-        });
+        getMeetups(meetupsContainer.dataset.meetupsUrl)
+            .then((result) => meetupsContainer.innerHTML = result);
     }
 });

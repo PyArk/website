@@ -1,16 +1,25 @@
 {% if events %}
-    <p>
-        {{ events|length }} upcoming event{% if events|length != 1 %}s{% endif %}
-    </p>
     <ul>
         {% for event in events %}
             <li>
-                <h3><a href="{{ event.link }}">{{ event.date.strftime('%Y-%m-%d %-I:%M') }}</a></h3>
+                <h3>
+                    {{ event.name }}
+                    <small>{{ event.date.strftime('%B %-d, %Y at %-I:%M %p') }}</small>
+                </h3>
+
                 {{ event.description|safe }}
-                <a href="{{ event.link }}">Learn more</a>
+                <a href="{{ event.link }}" class="btn">Learn more and RSVP</a>
             </li>
         {% endfor %}
     </ul>
 {% elif not success %}
-    <p>Could not load upcoming meetups at this time. Please try again later or visit <a href="{{ meetup_url }}">our Meetup page</a> to view meetups.</p>
+    <p>
+        Could not load upcoming meetups at this time. Please try again later or visit
+        <a href="{{ meetup_url }}">our Meetup page</a> to view meetups.
+    </p>
+{% else %}
+    <p>
+        No upcoming meetups scheduled at this time. Please come back later or visit
+        <a href="{{ meetup_url }}">our Meetup page</a>.
+    </p>
 {% endif %}

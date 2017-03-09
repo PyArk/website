@@ -22,7 +22,6 @@ assets.register('css_all', css)
 def global_context():
     return {
         'site_name': settings.SITE_NAME,
-        'admin_email': settings.ADMIN_EMAIL,
         'now': datetime.utcnow(),
     }
 
@@ -57,7 +56,9 @@ def getinvolved_meetups_route():
 
 @app.route('/contact/', methods=['GET'])
 def contact_route():
-    return render_template('pages/contact.html', page_title='Contact Us')
+    return render_template('pages/contact.html',
+                           page_title='Contact Us',
+                           admin_email=settings.ADMIN_EMAIL)
 
 @app.errorhandler(404)
 def error_handler_404(error):

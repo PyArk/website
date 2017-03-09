@@ -21,4 +21,9 @@ footer {
         display: inline;
         margin-left: $padding-medium;
     }
+    @media (max-width:490px) {
+        .right {
+            display: none;
+        }
+    }
 }

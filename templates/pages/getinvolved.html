@@ -12,35 +12,37 @@
         </p>
     </section>
 
-    <section class="row">
+    <section class="meetups">
         <h2>Meetups</h2>
         <div id="meetups-list" data-meetups-url="{{ url_for('getinvolved_meetups_route') }}">
             <p>loading meetups...</p>
         </div>
     </section>
 
-    <section class="row">
-        <h2>Projects</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
-        </p>
-        <ul>
-            <li>
-                <h3>SATNOGS</h3>
-                <p><em>Details coming soon...</em></p>
-            </li>
-            <li>
-                <h3>Kids Programming Thing</h3>
-                <p><em>Details coming soon...</em></p>
-            </li>
-        </ul>
-    </section>
+    <aside>
+        <section class="row">
+            <h3>Projects</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+            </p>
+            <ul>
+                <li>
+                    <h4>SATNOGS</h4>
+                    <p><em>Details coming soon...</em></p>
+                </li>
+                <li>
+                    <h4>Kids Programming Thing</h4>
+                    <p><em>Details coming soon...</em></p>
+                </li>
+            </ul>
+        </section>
 
-    <section class="row">
-        <h2>PYCONAR</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
-        </p>
-        <p><em>Details coming soon...</em></p>
-    </section>
+        <section class="row">
+            <h3>PYCONAR</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+            </p>
+            <p><em>Details coming soon...</em></p>
+        </section>
+    </aside>
 {% endblock content %}

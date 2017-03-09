@@ -1,3 +1,44 @@
+@import 'globals';
+
 .get-involved-page {
-    
+    $meetups-width: 66%;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    section {
+        margin-bottom: $padding-large * 2;
+    }
+    .meetups {
+        float: left;
+        width: $meetups-width;
+        padding-right: $padding-large;
+        li {
+            margin-bottom: $padding-large * 2;
+        }
+        h3 small {
+            margin-left: $padding-small;
+            color: $gray-1;
+            font-weight: 500;
+        }
+
+    }
+    aside {
+        float: left;
+        width: 100% - $meetups-width;
+        padding-left: $padding-large;
+        border-left: 1px solid $gray-4;
+        section:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width:600px) {
+        .meetups,
+        aside {
+            width: 100%;
+            padding: 0;
+            border: 0;
+        }
+    }
 }

@@ -31,47 +31,60 @@ header,
 section,
 main,
 footer,
+aside,
 cite {
   display: block;
+  margin: 0;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000335}}
+@media -sass-debug-info{filename{}line{font-family:\0000337}}
 h1,
 h2,
 h3,
 h4 {
-  margin: 0;
+  margin: 0 0 0.2em 0;
   line-height: 1.3em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000343}}
+@media -sass-debug-info{filename{}line{font-family:\0000345}}
 h1 {
   font-size: 2.3em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000347}}
+@media -sass-debug-info{filename{}line{font-family:\0000349}}
 h2 {
   font-size: 1.8em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000351}}
+@media -sass-debug-info{filename{}line{font-family:\0000353}}
 h3 {
   font-size: 1.4em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000355}}
+@media -sass-debug-info{filename{}line{font-family:\0000357}}
 h4 {
-  font-size: 1.2em;
+  font-size: 1.0em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000359}}
+@media -sass-debug-info{filename{}line{font-family:\0000361}}
 p {
+  margin: 0 0 1.2em 0;
   line-height: 1.4em;
 }
 
-@media -sass-debug-info{filename{}line{font-family:\0000363}}
-section + section {
-  margin-top: 18px;
+@media -sass-debug-info{filename{}line{font-family:\0000366}}
+.btn {
+  padding: 6px 18px;
+  border: 1px solid #bbb;
+  background: #fefefe;
+  color: #666;
+  border-radius: 2px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000372}}
+.btn:hover {
+  border-color: #bbb;
+  background: #eee;
+  color: #333;
 }
 
 @media -sass-debug-info{filename{}line{font-family:\000033}}
@@ -101,7 +114,59 @@ footer li {
   display: inline;
   margin-left: 12px;
 }
+@media (max-width: 490px) {
+@media -sass-debug-info{filename{}line{font-family:\0000325}}
+  footer .right {
+    display: none;
+  }
+}
 
+@media -sass-debug-info{filename{}line{font-family:\000035}}
+.get-involved-page ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000310}}
+.get-involved-page section {
+  margin-bottom: 36px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000313}}
+.get-involved-page .meetups {
+  float: left;
+  width: 66%;
+  padding-right: 18px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000317}}
+.get-involved-page .meetups li {
+  margin-bottom: 36px;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000320}}
+.get-involved-page .meetups h3 small {
+  margin-left: 6px;
+  color: #666;
+  font-weight: 500;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000327}}
+.get-involved-page aside {
+  float: left;
+  width: 34%;
+  padding-left: 18px;
+  border-left: 1px solid #eee;
+}
+@media -sass-debug-info{filename{}line{font-family:\0000332}}
+.get-involved-page aside section:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+@media -sass-debug-info{filename{}line{font-family:\0000337}}
+  .get-involved-page .meetups,
+  .get-involved-page aside {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+}
 
 
 @media -sass-debug-info{filename{}line{font-family:\000033}}
