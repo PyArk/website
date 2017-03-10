@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 
 from flask import Flask, render_template
 from flask_assets import Environment, Bundle
+from werkzeug.exceptions import HTTPException
 
 import settings
 
@@ -59,6 +60,16 @@ def contact_route():
     return render_template('pages/contact.html',
                            page_title='Contact Us',
                            admin_email=settings.ADMIN_EMAIL)
+
+@app.errorhandler(Exception)
+def handle_error(e):
+    code = 500
+    if isinstance(e, HTTPException):
+        code = e.code
+    message = ('Oh, no! Something happened during that request. Please try again later or email '
+               '<a href="mailto:{email}">{email}</a>'
+                    .format(email=settings.ERROR_EMAIL))
+    return message, code
 
 @app.errorhandler(404)
 def error_handler_404(error):

@@ -1,6 +1,9 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-    <h1>404</h1>
-    <p>This page doesn't exist.</p>
+    <h1>Nothing to see here</h1>
+    <p>
+        There's nothing at this URL.
+        <a href="{{ url_for('index_route') }}">Go back to the homepage.</a>
+    </p>
 {% endblock content %}
