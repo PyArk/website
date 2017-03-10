@@ -77,4 +77,4 @@ def error_handler_404(error):
 
 
 if __name__ == '__main__':
-    app.run(debug=settings.FLASK_DEBUG)
+    app.run(host='0.0.0.0', debug=settings.FLASK_DEBUG port=80)
