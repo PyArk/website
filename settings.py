@@ -1,5 +1,5 @@
 FLASK_DEBUG = True
-SITE_NAME = 'PYAR2: Python Artist of Arkansas'
+SITE_NAME = 'Python Artist of Arkansas'
 ADMIN_EMAIL = 'info@example.com'
 ERROR_EMAIL = 'info+errors@example.com' 
 ASSETS_DEBUG = FLASK_DEBUG
