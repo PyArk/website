@@ -63,7 +63,12 @@ p {
     line-height: 1.4em;
 }
 
+main {
+    min-height: 300px;
+}
+
 .btn {
+    display: inline-block;
     padding: $padding-small $padding-large;
     border: 1px solid $gray-3;
     background: $gray-5;

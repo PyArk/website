@@ -6,8 +6,6 @@
                     Home</a></li>
                 <li><a href="{{ url_for('getinvolved_route') }}"{% if request.url_rule.endpoint == 'getinvolved_route' %} class="active"{% endif %}>
                     Get involved</a></li>
-                <li><a href="{{ url_for('contact_route') }}"{% if request.url_rule.endpoint == 'contact_route' %} class="active"{% endif %}>
-                    Contact us</a></li>
             </ul>
         </span>
         <span class="left">

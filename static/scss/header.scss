@@ -78,9 +78,6 @@ header {
             padding: $padding-medium;
             font-size: 0.9em;
             text-align: center;
-            &.home {
-                display: none;
-            }
         }
         .logo::after {
             transform: scale(0.8);

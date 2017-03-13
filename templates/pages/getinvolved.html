@@ -6,16 +6,18 @@
     <section class="row">
         <h1>{{ page_title }}</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
-            Nulla tempus ante id fermentum posuere. Praesent volutpat eget nisi in laoreet. Donec id
-            eros velit.
+            We've got something for Python developers of all types, whether you're a beginner or a
+            seasoned professional.
+            <a href="{{ meetup_events_url }}" target="_blank">Join us for one of our meetups</a> or
+            dive right into one of our exciting community projects.
         </p>
     </section>
 
     <section class="meetups">
         <h2>Meetups</h2>
+        <p>We get together on the last Thursday of every month.</p>
         <div id="meetups-list" data-meetups-url="{{ url_for('getinvolved_meetups_route') }}">
-            <p>loading meetups...</p>
+            <p>...</p>
         </div>
     </section>
 
@@ -23,15 +25,15 @@
         <section class="row">
             <h3>Projects</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+                We're always on a the lookout for community-centered projects to help introduce
+                others to Python and to find new and interesting ways to use Python.
             </p>
             <ul>
                 <li>
                     <h4>SATNOGS</h4>
                     <p><em>Details coming soon...</em></p>
-                </li>
-                <li>
-                    <h4>Kids Programming Thing</h4>
+                </li><li>
+                    <h4>Raspberry Pi Programming for Kids</h4>
                     <p><em>Details coming soon...</em></p>
                 </li>
             </ul>
@@ -40,9 +42,9 @@
         <section class="row">
             <h3>PYCONAR</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at lectus arcu.
+                We're in the very early stages of planning a Python conference in central Arkansas
+                later this year. Check back soon for more details.
             </p>
-            <p><em>Details coming soon...</em></p>
         </section>
     </aside>
 {% endblock content %}

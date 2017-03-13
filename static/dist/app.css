@@ -73,14 +73,20 @@ p {
 }
 
 @media -sass-debug-info{filename{}line{font-family:\0000366}}
+main {
+  min-height: 300px;
+}
+
+@media -sass-debug-info{filename{}line{font-family:\0000370}}
 .btn {
+  display: inline-block;
   padding: 6px 18px;
   border: 1px solid #bbb;
   background: #fefefe;
   color: #666;
   border-radius: 2px;
 }
-@media -sass-debug-info{filename{}line{font-family:\0000372}}
+@media -sass-debug-info{filename{}line{font-family:\0000377}}
 .btn:hover {
   border-color: #bbb;
   background: #eee;
@@ -256,17 +262,13 @@ header .logo::after {
     font-size: 0.9em;
     text-align: center;
   }
-@media -sass-debug-info{filename{}line{font-family:\0000381}}
-  header a.home {
-    display: none;
-  }
-@media -sass-debug-info{filename{}line{font-family:\0000385}}
+@media -sass-debug-info{filename{}line{font-family:\0000382}}
   header .logo::after {
     transform: scale(0.8);
   }
 }
 @media (max-width: 280px) {
-@media -sass-debug-info{filename{}line{font-family:\0000391}}
+@media -sass-debug-info{filename{}line{font-family:\0000388}}
   header a {
     padding: 12px 6px;
     font-size: 0.8em;
@@ -311,7 +313,7 @@ header .logo::after {
 @media -sass-debug-info{filename{}line{font-family:\000033}}
 .container {
   position: relative;
-  width: 960px;
+  width: 800px;
   max-width: 100%;
   padding: 0 18px;
   margin: 0 auto;

@@ -21,8 +21,12 @@ assets.register('css_all', css)
 
 @app.context_processor
 def global_context():
+    meetup_url = 'https://www.meetup.com/{}/'.format(settings.MEETUP_SLUG)
     return {
         'site_name': settings.SITE_NAME,
+        'meetup_url': meetup_url,
+        'meetup_events_url': '{}events/'.format(meetup_url),
+        'admin_email': settings.ADMIN_EMAIL,
         'now': datetime.utcnow(),
     }
 
@@ -49,17 +53,9 @@ def getinvolved_meetups_route():
         for event in events:
             dt = datetime.utcfromtimestamp(event['time'] / 1000)
             event['date'] = dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
-    meetup_url = 'https://www.meetup.com/{}/events/'.format(settings.MEETUP_SLUG)
     return render_template('pages/getinvolved_meetups.html',
                            events=events,
-                           success=success,
-                           meetup_url=meetup_url)
-
-@app.route('/contact/', methods=['GET'])
-def contact_route():
-    return render_template('pages/contact.html',
-                           page_title='Contact Us',
-                           admin_email=settings.ADMIN_EMAIL)
+                           success=success)
 
 @app.errorhandler(Exception)
 def handle_error(e):
@@ -77,4 +73,4 @@ def error_handler_404(error):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=settings.FLASK_DEBUG, port=80)
+    app.run(host=settings.FLASK_HOST, debug=settings.FLASK_DEBUG, port=settings.FLASK_PORT)

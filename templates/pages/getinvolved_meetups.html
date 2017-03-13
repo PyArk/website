@@ -15,11 +15,11 @@
 {% elif not success %}
     <p>
         Could not load upcoming meetups at this time. Please try again later or visit
-        <a href="{{ meetup_url }}">our Meetup page</a> to view meetups.
+        <a href="{{ meetup_events_url }}">our Meetup page</a> to view meetups.
     </p>
 {% else %}
     <p>
         No upcoming meetups scheduled at this time. Please come back later or visit
-        <a href="{{ meetup_url }}">our Meetup page</a>.
+        <a href="{{ meetup_events_url }}">our Meetup page</a>.
     </p>
 {% endif %}
