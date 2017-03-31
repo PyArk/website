@@ -1,4 +1,6 @@
 import requests
+import time
+import pytz
 from datetime import datetime, timezone
 
 from flask import Flask, render_template
@@ -51,8 +53,10 @@ def getinvolved_meetups_route():
         success = True
         events = r.json()
         for event in events:
-            dt = datetime.utcfromtimestamp(event['time'] / 1000)
-            event['date'] = dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+            t = time.localtime((event['time'] / 1000) - (5 * 60 * 60))
+            dt = datetime.utcfromtimestamp(time.mktime(t))
+            tz = pytz.timezone('America/Chicago')
+            event['date'] = tz.localize(dt)
     return render_template('pages/getinvolved_meetups.html',
                            events=events,
                            success=success)
