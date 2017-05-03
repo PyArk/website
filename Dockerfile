@@ -1,9 +1,11 @@
 FROM tiangolo/uwsgi-nginx-flask:flask-python3.5
 
-MAINTAINER Sebastian Ramirez <tiangolo@gmail.com>
+MAINTAINER Scott Shellabarger <scott.shellabarger@gmail.com>
+
+ARG github_token
 
 # Clone our private GitHub Repository
-RUN git clone https://$var1:x-oauth-basic@github.com/PyArk/website /myapp/
+RUN git clone https://${github_token}:x-oauth-basic@github.com/PyArk/website /myapp/
 
 #move repo and install requirements
 RUN cp -R /myapp/* /app/
