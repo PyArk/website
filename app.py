@@ -9,7 +9,6 @@ from werkzeug.exceptions import HTTPException
 
 import settings
 
-
 app = Flask(__name__)
 assets = Environment(app)
 app.config['ASSETS_DEBUG'] = settings.ASSETS_DEBUG
